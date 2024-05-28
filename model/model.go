@@ -1,5 +1,7 @@
 package model
 
+import "go.mongodb.org/mongo-driver/bson/primitive"
+
 type ErrorResponse struct {
 	Error string `json:"error"`
 }
@@ -9,17 +11,10 @@ type SuccessResponse struct {
 }
 
 type Student struct {
-	ID      int    `json:"id"`
-	Name    string `json:"name"`
-	Address string `json:"address"`
-	Class   string `json:"class"`
-}
-
-type Course struct {
-	ID         int    `json:"id"`
-	Name       string `json:"name"`
-	Schedule   string `json:"schedule"`
-	Attendance int    `json:"attendance"`
+	ID      primitive.ObjectID `bson:"_id"`
+	Name    string             `bson:"name"`
+	Email   string             `bson:"email"`
+	Address string             `bson:"address"`
 }
 
 type Credential struct {

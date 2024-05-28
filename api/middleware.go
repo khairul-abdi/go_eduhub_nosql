@@ -2,7 +2,7 @@ package api
 
 import (
 	"encoding/json"
-	"go_eduhub/model"
+	"go_eduhub_nosql/model"
 	"net/http"
 )
 
